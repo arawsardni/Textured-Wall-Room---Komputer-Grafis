@@ -161,13 +161,13 @@
 
       // DINDING KIRI (x=-W/2): sisi interior menghadap +X -> rotasi +90° Y
       const leftWall = new THREE.Mesh(new THREE.PlaneGeometry(D, H), matWall);
-      leftWall.rotation.y = -Math.PI / 2; // Perubahan di bagian ini menambahkan tanda minus agar wall menghadap ke dalam
+      leftWall.rotation.y = Math.PI / 2; // Perubahan di bagian ini menambahkan tanda minus agar wall menghadap ke dalam
       leftWall.position.set(-W / 2, H / 2, 0);
       scene.add(leftWall);
 
       // DINDING KANAN (x=+W/2): sisi interior menghadap -X -> rotasi -90° Y
       const rightWall = new THREE.Mesh(new THREE.PlaneGeometry(D, H), matWall);
-      rightWall.rotation.y = Math.PI / 2; // Perubahan di bagian ini menghapus tanda minus agar wall menghadap ke dalam
+      rightWall.rotation.y = -Math.PI / 2; // Perubahan di bagian ini menghapus tanda minus agar wall menghadap ke dalam
       rightWall.position.set(W / 2, H / 2, 0);
       scene.add(rightWall);
 
